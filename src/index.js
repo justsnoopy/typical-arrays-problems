@@ -1,12 +1,14 @@
 
 exports.min = function min (array) {
-  return 0;
+  const arrMin = Math.min.apply(null, array);
+  return array == undefined || !array.length ? 0 : arrMin
 }
 
 exports.max = function max (array) {
-  return 0;
+  const arrMax = Math.max.apply(null, array);
+  return array == undefined || !array.length ? 0 : arrMax
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    return array == undefined || !array.length ? 0 : array.reduce((sum, current) => (sum + current)) / array.length;
 }
